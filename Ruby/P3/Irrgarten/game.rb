@@ -99,7 +99,7 @@ module Irrgarten
         end
 
    
-        def manage_reward(winner)
+        def manage_reward (winner)
             
             if (winner == GameCharacter::PLAYER)
                 @current_player.receive_reward()
@@ -161,7 +161,7 @@ module Irrgarten
 
             # Creación de jugadores
             @players = Array.new
-            for i in (1..n_players)
+            for i in (0..n_players-1)
                 @players << Player.new(i.to_s, Dice.random_intelligence, Dice.random_strength)
             end
 

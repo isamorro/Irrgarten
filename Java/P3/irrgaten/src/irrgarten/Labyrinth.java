@@ -44,7 +44,6 @@ public class Labyrinth {
         labyrinth = new char [nRows][nCols];
         players = new Player[nRows][nCols];
         
-        // Casillas vacías y muros
         for (int i = 0; i < nRows ; i++){
             for (int j = 0; j < nCols; j++){
                 
@@ -58,7 +57,6 @@ public class Labyrinth {
             }
         }
         
-        // Casilla de salida
         labyrinth [this.exitRow][this.exitCol] = EXIT_CHAR;
     }
     

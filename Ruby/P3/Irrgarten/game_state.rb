@@ -48,11 +48,11 @@ module Irrgarten
             cadena << @labyrinth << "\n"
             cadena << @players << "\n"
             cadena << @monsters << "\n"
-            cadena << "TURNO: JUGADOR " << (@current_player + 1).to_s << "\n"
+            cadena << "TURNO: JUGADOR " << @current_player.to_s << "\n"
 
             if (@winner) 
                 cadena << "HAY GANADOR!!!!" << "\n" << "FELICIDADES JUGADOR " <<
-                (@current_player + 1).to_s << "\n";
+                @current_player.to_s << "\n";
             end
 
             cadena << @log << "\n"

@@ -66,20 +66,12 @@ public class Player {
     }
     
     private void receiveShield(Shield s){
-        
-        boolean discard;
-        
-        System.out.print(shields.size());
-        
+                
         for (Shield si : shields){
-            discard = si.discard();
-            if (discard)
-                shields.remove(si);
+            if (si.discard()) shields.remove(si);
         }
-        
-        int size = shields.size();
-        
-        if (size < MAX_SHIELDS) shields.add(s);
+       
+        if (shields.size() < MAX_SHIELDS) shields.add(s);
     }
     
     private Weapon newWeapon() {
@@ -205,7 +197,7 @@ public class Player {
         return manageHit(receivedAttack);
     }
     
-    public void receivedReward(){
+    public void receiveReward(){
         
         int wReward = Dice.weaponsReward();
         int sReward = Dice.shieldsReward();

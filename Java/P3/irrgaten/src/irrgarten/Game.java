@@ -127,7 +127,7 @@
     private void manageReward (GameCharacter winner){
         
         if (winner == GameCharacter.PLAYER){
-            currentPlayer.receivedReward();
+            currentPlayer.receiveReward();
             logPlayerWon();
         }
         else {
