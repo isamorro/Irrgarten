@@ -54,14 +54,10 @@ public class Player {
         System.out.print(weapons.size());
         
         for (Weapon wi : weapons){
-            discard = wi.discard();
-            if(discard)
-                weapons.remove(wi);
+            if (wi.discard()) weapons.remove(wi);
         }
         
-        int size = weapons.size();
-        
-        if (size < MAX_WEAPONS) weapons.add(w);
+        if (weapons.size() < MAX_WEAPONS) weapons.add(w);
         
     }
     

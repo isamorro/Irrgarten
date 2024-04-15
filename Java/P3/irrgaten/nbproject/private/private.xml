@@ -12,19 +12,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Labyrinth.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Controller/Controller.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Shield.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/UI/TextUI.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Dice.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Orientation.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Monster.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/GameState.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Directions.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Game.java</file>
             <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/Player.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/mainP3.java</file>
-            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/GameCharacter.java</file>
+            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/irrgarten/UI/TextUI.java</file>
+            <file>file:/C:/Users/Omnia%20Infosys/Desktop/PROYECTO%20PDOO/Java/P3/irrgaten/src/main/mainP3.java</file>
         </group>
     </open-files>
 </project-private>

@@ -17,5 +17,6 @@ module Control
       end
       @view.show_game(@game.game_state)
     end
+    
   end # class   
 end # module        

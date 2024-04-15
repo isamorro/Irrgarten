@@ -1,7 +1,8 @@
 
-package irrgarten;
+package main;
 
 import irrgarten.Controller.Controller;
+import irrgarten.Game;
 import irrgarten.UI.TextUI;
 
 /**
