@@ -58,28 +58,28 @@ module Irrgarten
         def update_old_pos (row, col)
             if pos_ok(row,col)
                 if combat_pos(row, col)
-                    @labyrinth[row][col] = MONSTER_CHAR
+                    @labyrinth[row][col] = @@MONSTER_CHAR
                 else 
-                    @labyrinth[row][col] = EMPTY_CHAR
+                    @labyrinth[row][col] = @@EMPTY_CHAR
                 end
             end
         end
 
         def dir_2_pos (row, col, direction)
             
-            resultado[] = Array.new
+            resultado = Array.new
 
             case direction
-                when DOWN
+                when Directions::DOWN
                     resultado[0] = row + 1
                     resultado[1] = col
-                when UP
+                when Directions::UP
                     resultado[0] = row - 1
                     resultado[1] = col
-                when LEFT
+                when Directions::LEFT
                     resultado[0] = row
                     resultado[1] = col - 1
-                else RIGHT
+                else Directions::RIGHT
                     resultado[0] = row
                     resultado[1] = col + 1 
             end
@@ -90,9 +90,9 @@ module Irrgarten
         def random_empty_pos
 
             begin
-                fila = Dice.random_pos(@nRows)
-                columna = Dice.random_pos(@nCols)
-            end while !(empty_pos(row, col))
+                fila = Dice.random_pos(@n_rows)
+                columna = Dice.random_pos(@n_cols)
+            end while !(empty_pos(fila, columna))
 
             resultado = Array.new
             resultado[0] = fila
@@ -119,7 +119,7 @@ module Irrgarten
                 monster_pos = monster_pos(row, col)
 
                 if (monster_pos)
-                    @labyrinth[row][col] = COMBAT_CHAR
+                    @labyrinth[row][col] = @@COMBAT_CHAR
                     output = @monsters[row][col]
                 else 
                     number = player.number
@@ -128,7 +128,7 @@ module Irrgarten
 
                 @players[row][col] = player
 
-                player.set_pos(row, col)
+                player.pos(row, col)
 
             end
 
@@ -214,8 +214,8 @@ module Irrgarten
 
         def put_player (direction, player)
 
-            old_row = @player.row
-            old_col = @player.col
+            old_row = player.row
+            old_col = player.col
 
             new_pos = dir_2_pos(old_row, old_col, direction)
             monster = put_player_2D(old_row, old_col, new_pos[@@ROW], new_pos[@@COL], player)
@@ -274,9 +274,9 @@ module Irrgarten
             cadena = ""
             for i in (0..@n_rows-1)
                 for j in (0..@n_cols-1)
-                    cadena += @labyrinth[i][j]
+                    cadena << @labyrinth[i][j]
                     if j == @n_cols-1
-                        cadena += "\n"
+                        cadena << "\n"
                     end
                 end
             end

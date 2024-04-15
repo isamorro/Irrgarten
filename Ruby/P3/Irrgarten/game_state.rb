@@ -6,9 +6,9 @@ module Irrgarten
 
         # Constructor 
 
-        def initialize (labyrinthv, players, monsters, current_player,
+        def initialize (labyrinth, players, monsters, current_player,
                         winner, log)
-            @labyrinthv = labyrinthv 
+            @labyrinth = labyrinth 
             @players = players 
             @monsters = monsters 
             @current_player = current_player 
@@ -18,8 +18,8 @@ module Irrgarten
 
         # Métodos Públicos
         
-        def labyrinthv
-            @labyrinthv
+        def labyrinth
+            @labyrinth
         end
 
         def players
@@ -44,17 +44,18 @@ module Irrgarten
 
         def to_s
 
-            cadena = @labyrinth + "\n"
-            cadena += @players + "\n"
-            cadena += @monsters + "\n"
-            cadena += "TURNO: JUAGADOR " + @current_player + "\n"
+            cadena = ""
+            cadena << @labyrinth << "\n"
+            cadena << @players << "\n"
+            cadena << @monsters << "\n"
+            cadena << "TURNO: JUGADOR " << (@current_player + 1).to_s << "\n"
 
             if (@winner) 
-                cadena += "HAY GANADOR!!!!" + "\n" + "FELICIDADES JUGADOR " 
-                + @current_player + "\n";
+                cadena << "HAY GANADOR!!!!" << "\n" << "FELICIDADES JUGADOR " <<
+                (@current_player + 1).to_s << "\n";
             end
 
-            cadena += @log + "\n"
+            cadena << @log << "\n"
 
             cadena
 

@@ -21,9 +21,7 @@ module Irrgarten
         
         # Decrementa en una unidad la salud el monstruo
         def got_wounded
-            if @health > 0
-                @health -= 1
-            end
+            @health = @health - 1
         end
 
     public 
@@ -42,7 +40,11 @@ module Irrgarten
 
         # Devuelve true si el monstruo está muerto
         def dead
-            (@health <= 0)
+            resultado = false
+            if (@health <= 0) 
+                resultado = true 
+            end
+            resultado
         end
 
         def attack
@@ -53,12 +55,11 @@ module Irrgarten
             is_dead = dead()
             if (!is_dead)
                 defensive_energy = Dice.intensity(@intelligence)
-                while (defensive_energy < receive_attack)
+                if (defensive_energy < received_attack)
                     got_wounded()
                     is_dead = dead()
                 end
             end
-
             is_dead
         end
 

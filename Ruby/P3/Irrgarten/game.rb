@@ -79,10 +79,10 @@ module Irrgarten
             player_attack = @current_player.attack()
             lose = monster.defend(player_attack)
 
-            while (!lose && rounds < MAX_ROUNDS) 
+            while (!lose && rounds < @@MAX_ROUNDS) 
             
                 winner = GameCharacter::MONSTER 
-                round += 1
+                rounds += 1
                 monster_attack = monster.attack()
                 lose = @current_player.defend(monster_attack)
 
@@ -94,10 +94,8 @@ module Irrgarten
 
             end
 
-            log_rounds(rounds, MAX_ROUNDS)
-
+            log_rounds(rounds, @@MAX_ROUNDS)
             winner
-
         end
 
    
@@ -125,7 +123,7 @@ module Irrgarten
 
         end
 
-        def logP_player_won
+        def log_player_won
             @log << "EL JUGADOR HA GANADO EL COMBATE \n"
         end
 
@@ -142,10 +140,10 @@ module Irrgarten
         end
 
         def log_player_no_orders
-            @log << "EL JUGADOR NO HA SEGUIDO LAS INTURCCIONES \n"
+            @log << "EL JUGADOR NO HA SEGUIDO LAS INTRUCCIONES \n"
         end
 
-        def log_no_mmonster
+        def log_no_monster
             @log << "EL JUGADOR SE HA MOVIDO A UNA CELDA VACIA O NO HA PODIDO MOVERSE \n"
         end
 
@@ -163,7 +161,7 @@ module Irrgarten
 
             # Creación de jugadores
             @players = Array.new
-            for i in (0..n_players)
+            for i in (1..n_players)
                 @players << Player.new(i.to_s, Dice.random_intelligence, Dice.random_strength)
             end
 
@@ -184,7 +182,7 @@ module Irrgarten
 
         def next_step (preferred_direction)
             
-            log = ""
+            @log = ""
             dead = @current_player.dead()
 
             if (!dead)
@@ -222,18 +220,18 @@ module Irrgarten
 
             jugadores = "[ "
             for i in (0..@players.length)
-                jugadores << @players[i].to_s <<  "\n"
+                jugadores << @players[i].to_s
             end
             jugadores << " ]"
 
             monstruos = "[ "
             for i in (0..@monsters.length)
-                monstruos << @monsters[i].to_s << "\n"
+                monstruos << @monsters[i].to_s
             end
-            monstruos = " ]"
+            monstruos << " ]"
 
-            new GameState(@labyrinth.to_s, jugadores, monstruos,
-                            @current_player_index, finished(), @log)
+            return GameState.new(@labyrinth.to_s, jugadores, monstruos,
+                                @current_player_index, finished(), @log)
 
         end
 

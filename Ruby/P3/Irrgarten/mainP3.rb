@@ -2,6 +2,7 @@
 require_relative 'controller'
 require_relative 'textUI'
 require_relative 'game'
+require_relative 'dice'
 
 module Irrgarten
     class MainP3

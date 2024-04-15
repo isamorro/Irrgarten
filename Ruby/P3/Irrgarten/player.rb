@@ -58,7 +58,7 @@ module Irrgarten
 
         end
 
-        def receive_shields(s)
+        def receive_shield(s)
         
             @shields.each do |si|
                 discard = si.discard()
@@ -78,67 +78,70 @@ module Irrgarten
         def new_weapon
             power = Dice.weapon_power
             uses = Dice.uses_left
-            w = Wepon.new(power, uses)
+            w = Weapon.new(power, uses)
+            w
         end
 
         def new_shield            
             protection = Dice.shield_power
-            uses = Dice.uses_Left
+            uses = Dice.uses_left
             s = Shield.new(protection, uses)
+            s
         end
 
         def sum_weapons
             suma = 0
-            for i in (0..@weapons.length)
-                suma = suma + @weapons[i].attack
+            @weapons.each do |w|
+                suma += w.attack
             end
+            suma
         end
 
         def sum_shields
             suma = 0
-            for i in (0..@shields.length)
-                suma = suma + @shields[i].protect
+            @shields.each do |s|
+                suma += s.protect
             end
+            suma
         end
 
         def defensive_energy
-            sum_shields() + intelligence
+            sum_shields() + @intelligence
         end
 
-        def manage_Hit(receive_attack)
+        def manage_hit(receive_attack)
 
             defense = defensive_energy()
 
-            if (defense < receiv_aAttack)
+            if (defense < receive_attack)
                 got_wounded()
                 inc_consecutive_hits()
             else
                 reset_hits()
             end
 
-            if (consecutive_hits == @@HITS_2_LOSE || dead())
+            if (@consecutive_hits == @@HITS_2_LOSE || dead())
                 reset_hits()
                 lose = true
             else
                 lose = false 
             end
 
-            return lose
-
+            lose
         end
 
         def reset_hits
-            consecutive_hits = 0
+            @consecutive_hits = 0
         end
 
         def got_wounded
-            if health > 0
-                health = health - 1
+            if @health > 0
+                @health -= 1
             end
         end
 
         def inc_consecutive_hits
-            consecutive_hits += 1
+            @consecutive_hits += 1
         end
 
     public 
@@ -190,10 +193,10 @@ module Irrgarten
         end
 
         def attack
-            sum_weapons() + strength
+            sum_weapons() + @strength
         end
 
-        def defend
+        def defend (receive_attack)
             manage_hit(receive_attack)
         end
 
@@ -209,11 +212,11 @@ module Irrgarten
 
             for i in (0..s_reward)
                 s_new = new_shield()
-                receive_rsield(s_new)
+                receive_shield(s_new)
             end
 
             extra_health = Dice.health_reward()
-            health += extra_health
+            @health += extra_health
 
         end
 
