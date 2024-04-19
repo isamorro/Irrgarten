@@ -87,11 +87,11 @@ public class Monster {
     @Override
     public String toString(){
         String cadena;
-        cadena = "[ Nombre: " + name + "\n"
-                 + " Inteligencia: " + intelligence + "\n"
-                 + " Fuerza: " + strength +"\n"
-                 + " Salud: " + health + "\n"
-                 + " Posicion: (" + row + ", " + col + ") ]\n";
+        cadena = "[ Nombre: " + name + ","
+                 + " Inteligencia: " + intelligence + ","
+                 + " Fuerza: " + strength + ","
+                 + " Salud: " + health + ","
+                 + " Posicion: (" + row + ", " + col + ") ]";
         return cadena;
     }
     

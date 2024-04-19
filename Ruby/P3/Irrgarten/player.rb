@@ -35,7 +35,6 @@ module Irrgarten
 
             @weapons = Array.new
             @shields = Array.new
-
         end
 
         # Métodos privados
@@ -222,14 +221,36 @@ module Irrgarten
 
         # To string
         def to_s
-            cadena = ""
-            cadena  += "[ Nombre: " + @name + "\n"
-            cadena  += " Numero: " + @number + "\n"
-            cadena  += " Inteligencia: " + @intelligence.to_s + "\n"
-            cadena  += " Fuerza: " + @strength.to_s + "\n"
-            cadena  += " Salud: " + @health.to_s + "\n"
-            cadena  += " Posicion: (" << @row.to_s + ", " + @col.to_s + ") " + "\n"
-            cadena  += " Impactos consecutivos: " + @consecutive_hits.to_s + "]\n" 
+            cadena = "\n"
+            cadena  += "[ Nombre: " + @name + ","
+            cadena  += " Numero: " + @number + ","
+            cadena  += " Inteligencia: " + @intelligence.to_s + ","
+            cadena  += " Fuerza: " + @strength.to_s + ","
+            cadena  += " Salud: " + @health.to_s + ","
+            cadena  += " Posicion: (" << @row.to_s + ", " + @col.to_s + ") " + ","
+            cadena  += " Impactos consecutivos: " + @consecutive_hits.to_s + "\n"
+            cadena  += " Armas: "
+         
+            if (!@weapons.empty?)
+                @weapons.each do |wi|
+                    cadena += wi.to_s + " "
+                end
+            else
+                cadena += "No dispone de armas"
+            end
+            cadena += "\n"
+            cadena += " Shields: "
+            if (!@shields.empty?)
+                @shields.each do |si|
+                    cadena += si.to_s + " "
+                end
+            else 
+                cadena += "No dispone de escudos"
+            end
+            cadena += "]"
+            
+            cadena
+        
         end
 
     

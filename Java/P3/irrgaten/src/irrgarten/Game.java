@@ -58,8 +58,7 @@
         
         labyrinth.addBlock(Orientation.HORIZONTAL, 2, 3, 1);
         
-        Monster m1 = new Monster ("Monstruo #" + 1, Dice.randomIntelligence(),
-                                             Dice.randomStrength());
+        Monster m1 = new Monster ("Monstruo #" + 1, 10f,10f);
         Monster m2 = new Monster ("Monstruo #" + 2, Dice.randomIntelligence(),
                                              Dice.randomStrength());
         Monster m3 = new Monster ("Monstruo #" + 3, Dice.randomIntelligence(),
@@ -222,15 +221,13 @@
    */
   public GameState getGameState(){
    
-    String jugadores = "[ ";
+    String jugadores = "";
     for (int i=0; i < players.size(); i++)
         jugadores += players.get(i).toString() + "\n";
-    jugadores += "]";
 
-    String monstruos = "[ ";
+    String monstruos = "";
     for (int i=0; i < monsters.size(); i++)
         monstruos += monsters.get(i).toString() + "\n";
-    monstruos += "]";
     
     return new GameState (labyrinth.toString(), jugadores, monstruos,
                         currentplayerIndex,

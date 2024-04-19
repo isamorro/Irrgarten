@@ -69,7 +69,7 @@ public class GameState {
         if (winner) cadena += "HAY GANADOR!!!!" + "\n" + "FELICIDADES JUGADOR " 
                     + currentPlayer + "\n";
         
-        cadena += log + "\n";
+        if (!winner) cadena += log + "\n";
         
         return cadena;
    }

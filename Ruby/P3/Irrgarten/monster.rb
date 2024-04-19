@@ -69,11 +69,11 @@ module Irrgarten
         end
 
         def to_s
-            cadena = "[ Nombre: " + @name + "\n"
-            cadena  += " Inteligencia: " + @intelligence.to_s + "\n"
-            cadena  += " Fuerza: " + @strength.to_s + "\n"
-            cadena  += " Salud: " + @health.to_s + "\n"
-            cadena  += " Posicion: (" + @row.to_s + ", " + @col.to_s + ") ]\n"
+            cadena = "[ Nombre: " + @name + ","
+            cadena  += " Inteligencia: " + @intelligence.to_s + ","
+            cadena  += " Fuerza: " + @strength.to_s + ","
+            cadena  += " Salud: " + @health.to_s + ","
+            cadena  += " Posicion: (" + @row.to_s + ", " + @col.to_s + ")]\n"
         end
 
     end

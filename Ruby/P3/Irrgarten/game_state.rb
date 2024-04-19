@@ -55,8 +55,10 @@ module Irrgarten
                 @current_player.to_s << "\n";
             end
 
-            cadena << @log << "\n"
-
+            if (!@winner)
+                cadena << @log << "\n"
+            end 
+            
             cadena
 
         end

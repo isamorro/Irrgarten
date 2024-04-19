@@ -218,17 +218,15 @@ module Irrgarten
 
         def game_state
 
-            jugadores = "[ "
+            jugadores = ""
             for i in (0..@players.length)
                 jugadores << @players[i].to_s
             end
-            jugadores << " ]"
 
-            monstruos = "[ "
+            monstruos = ""
             for i in (0..@monsters.length)
                 monstruos << @monsters[i].to_s
             end
-            monstruos << " ]"
 
             return GameState.new(@labyrinth.to_s, jugadores, monstruos,
                                 @current_player_index, finished(), @log)

@@ -1,6 +1,7 @@
 
 package irrgarten;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @brief   Funcionalidades de los jugadores
@@ -49,12 +50,11 @@ public class Player {
     
     private void receiveWeapon(Weapon w){
         
-        boolean discard;
+        int tam_ini = weapons.size();
         
-        System.out.print(weapons.size());
-        
-        for (Weapon wi : weapons){
-            if (wi.discard()) weapons.remove(wi);
+        for (int i=tam_ini-1; i >= 0; i--){
+            if (weapons.get(i).discard())
+                weapons.remove(i);
         }
         
         if (weapons.size() < MAX_WEAPONS) weapons.add(w);
@@ -62,9 +62,12 @@ public class Player {
     }
     
     private void receiveShield(Shield s){
-                
-        for (Shield si : shields){
-            if (si.discard()) shields.remove(si);
+        
+        int tam_ini = shields.size();
+        
+        for (int i=tam_ini-1; i >= 0; i--){
+            if (shields.get(i).discard())
+                shields.remove(i);
         }
        
         if (shields.size() < MAX_SHIELDS) shields.add(s);
@@ -214,13 +217,27 @@ public class Player {
     
     @Override
     public String toString(){
-        String cadena = "[ Nombre: " + name + "\n"
-                        + " Numero: " + number + "\n"
-                        + " Inteligencia: " + intelligence + "\n"
-                        + " Fuerza: " + strength + "\n"
-                        + " Salud: " + health + "\n"
-                        + " Posicion: (" + row + ", " + col + ") " + "\n"
-                        + " Impactos consecutivos: " + consecutiveHits + "]\n";
+        String cadena = "[ Nombre: " + name + ","
+                        + " Numero: " + number + ","
+                        + " Inteligencia: " + intelligence + ","
+                        + " Fuerza: " + strength + ","
+                        + " Salud: " + health + ","
+                        + " Posicion: (" + row + ", " + col + ") " + ","
+                        + " Impactos consecutivos: " + consecutiveHits + "\n" 
+                        + " Armas: ";
+        
+        if (!weapons.isEmpty()){
+            for (Weapon wi : weapons) cadena += wi.toString() + " ";
+        }
+        else cadena += "No dispone de armas";
+        cadena += "\n";
+        cadena += " Shields: ";
+        if (!shields.isEmpty()){
+            for (Shield si : shields) cadena += si.toString() + " ";
+        }
+        else cadena += "No dispone de escudos";
+        cadena += "]";
+        
         return cadena;
     }
    
