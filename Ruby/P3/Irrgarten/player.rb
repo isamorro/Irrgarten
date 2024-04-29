@@ -23,24 +23,9 @@ module Irrgarten
         @@INITIAL_HEALTH = 10
         @@HITS_2_LOSE = 3
 
-        def initialize (number, intelligence, strength)
-            @number = number
-            @name = "Player #" + @number
-            @intelligence = intelligence
-            @strength = strength
-            @health = @@INITIAL_HEALTH
-            @row = 0
-            @col = 0
-            @consecutive_hits = 0
-
-            @weapons = Array.new
-            @shields = Array.new
-        end
-
         # Métodos privados
 
         def receive_weapon(w)
-
 
             @weapons.each do |wi|
                 discard = wi.discard()
@@ -144,8 +129,22 @@ module Irrgarten
         end
 
     public 
-
+    
         # Métodos públicos
+
+        def initialize (number, intelligence, strength)
+            @number = number
+            @name = "Player #" + @number
+            @intelligence = intelligence
+            @strength = strength
+            @health = @@INITIAL_HEALTH
+            @row = 0
+            @col = 0
+            @consecutive_hits = 0
+
+            @weapons = Array.new
+            @shields = Array.new
+        end
 
         def resurrect
             @weapons.clear 

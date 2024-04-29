@@ -168,15 +168,7 @@ public class Labyrinth {
     }
     
     // Métodos públicos
-    
-    public int getNRows(){
-        return nRows;
-    }
-    
-    public int getNCols(){
-        return nCols;
-    }
-    
+
     public void spreadPlayers (ArrayList<Player> players){
         for (Player p : players){
             int[] pos = randomEmptyPos();

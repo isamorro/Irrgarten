@@ -51,13 +51,7 @@ module Irrgarten
 
         # Actualiza los atributos del jugador de turno
         def next_player
-
-            anterior = @current_player_index
-
-            begin
-                @current_player_index = Dice.who_starts(@players.length)
-            end while @current_player_index == anterior
-
+            @current_player_index = (@current_player_index + 1) % @players.size
             @current_player = @players[@current_player_index]
         end
 

@@ -15,7 +15,7 @@
 
         // Atributos privados de instancia
 
-       private int currentplayerIndex;
+       private int currentPlayerIndex;
        private String log;
 
        private Labyrinth labyrinth;
@@ -38,8 +38,8 @@
            }
 
            // Determinar quien empieza
-           currentplayerIndex = Dice.whoStarts(nplayers);
-           currentPlayer = players.get(currentplayerIndex);
+           currentPlayerIndex = Dice.whoStarts(nplayers);
+           currentPlayer = players.get(currentPlayerIndex);
 
            monsters =  new ArrayList<>();
            labyrinth = new Labyrinth(10, 10, 0, 1); // Valores a escoger
@@ -79,12 +79,8 @@
      */
     private void nextPlayer(){
         
-        int anterior = currentplayerIndex;        
-        do{
-            currentplayerIndex = Dice.whoStarts(players.size());
-        } while (currentplayerIndex == anterior);
-        
-        currentPlayer = players.get(currentplayerIndex);
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.size(); 
+        currentPlayer = players.get(currentPlayerIndex);
     }
 
     private Directions actualDirection (Directions preferredDirection){
@@ -230,7 +226,7 @@
         monstruos += monsters.get(i).toString() + "\n";
     
     return new GameState (labyrinth.toString(), jugadores, monstruos,
-                        currentplayerIndex,
+                        currentPlayerIndex,
                         finished(), log);
   }  
 }

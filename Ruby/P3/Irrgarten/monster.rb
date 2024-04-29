@@ -32,8 +32,8 @@ module Irrgarten
             @intelligence = intelligence
             @strength = strength
             @health = @@INITIAL_HEALTH
-            @row = 0
-            @col = 0
+            @row = -1
+            @col = -1
         end
 
         # Métodos públicos

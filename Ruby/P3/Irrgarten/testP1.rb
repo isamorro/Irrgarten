@@ -133,7 +133,7 @@ module Irrgarten
             puts game_state.players 
             puts game_state.monsters 
             puts game_state.current_player
-            puts game_state.winner 
+            puts game_state.is_winner 
             puts game_state.log 
 
             # PROBANDO "ENUMCLASS" VARIOS

@@ -49,7 +49,7 @@ public class GameState {
         return currentPlayer;
     }
     
-    public boolean getWinner(){
+    public boolean isWinner(){
         return winner;
     }
     

@@ -180,14 +180,6 @@ module Irrgarten
 
         # Métodos públicos
 
-        def n_rows
-            @n_rows
-        end 
-
-        def n_cols
-            @n_cols
-        end
-
         # P3
         def spread_players (players)
 

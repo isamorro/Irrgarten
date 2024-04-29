@@ -67,12 +67,12 @@ module Irrgarten
 
         # Devuelve un valor aleatorio de [0, MAX_ATTACK[
         def self.weapon_power
-            @@generator.rand(@@MAX_ATTACK)
+            @@generator.rand*@@MAX_ATTACK
         end
 
         # Devuelve valor aleatorio de [0, MAX_SHIELD[
         def self.shield_power
-            @@generator.rand(@@MAX_SHIELD)
+            @@generator.rand()*@@MAX_SHIELD
         end
 
         # Devuelve el número de usos que se asignará a un arma o escudo

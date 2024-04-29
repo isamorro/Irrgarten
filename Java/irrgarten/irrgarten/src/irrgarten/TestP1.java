@@ -107,7 +107,7 @@ public class TestP1 {
         System.out.println(gmst.getPlayers());
         System.out.println(gmst.getMonsters());
         System.out.println(gmst.getCurrentPlayer());
-        System.out.println(gmst.getWinner());
+        System.out.println(gmst.isWinner());
         System.out.println(gmst.getLog());
         
         // Probando EnumClass

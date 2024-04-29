@@ -34,7 +34,7 @@ module Irrgarten
             @currentPlayer
         end
 
-        def winner
+        def is_winner
             @winner
         end
 

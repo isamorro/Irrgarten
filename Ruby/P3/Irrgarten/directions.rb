@@ -18,4 +18,4 @@ module Irrgarten
     end
 end
 
-# puts Irrgarten::Directions::LEFT
+
