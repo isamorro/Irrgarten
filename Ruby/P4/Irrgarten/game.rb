@@ -32,10 +32,8 @@ module Irrgarten
             orientacion = Orientation::HORIZONTAL
             @labyrinth.add_block(orientacion, 2, 3, 1)
     
-            m1 = Monster.new("Monstruo #" + '1', Dice.random_intelligence,
-                             Dice.random_strength)
-            m2 = Monster.new("Monstruo #" + '2', Dice.random_intelligence,
-                             Dice.random_strength)
+            m1 = Monster.new("Monstruo #" + '1', 10.0, 10.0)
+            m2 = Monster.new("Monstruo #" + '2',  10.0, 10.0)
             m3 = Monster.new("Monstruo #" + '3', Dice.random_intelligence,
                              Dice.random_strength)
 
@@ -110,6 +108,10 @@ module Irrgarten
 
             if (resurrect)
                 @current_player.resurrect()
+                fp = FuzzyPlayer.new(@current_player)
+                @current_player = fp
+                @players[@current_player_index] = fp
+                @labyrinth.resurrection_fuzzy_player(@current_player.row, @current_player.col, fp)
                 log_resurrected()
             else 
                 log_player_skip_turn()
@@ -156,7 +158,7 @@ module Irrgarten
             # Creación de jugadores
             @players = Array.new
             for i in (0..n_players-1)
-                @players << Player.new(i.to_s, Dice.random_intelligence, Dice.random_strength)
+                @players << Player.new(i.to_s, 0, 5)
             end
 
             # Determinar quién empieza

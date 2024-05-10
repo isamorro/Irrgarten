@@ -9,6 +9,7 @@
 =end
 
 require_relative 'dice'
+require_relative 'labyrinth_character'
 
 module Irrgarten
     class Monster < LabyrinthCharacter
@@ -21,9 +22,9 @@ module Irrgarten
 
         # Constructor 
         def initialize (name, intelligence, strength)
-            super (name, intelligence, strength)
+            super(name, intelligence, strength)
             set_health(@@INITIAL_HEALTH)
-            set_pos (-1,-1)
+            set_pos(-1,-1)
         end
 
         # Métodos públicos

@@ -1,9 +1,13 @@
 
+
+require_relative 'Dice'
+require_relative 'player'
+
 module Irrgarten
     class FuzzyPlayer < Player
 
         def initialize (other)
-            super(other)
+            player_copy(other)
         end
 
         def move (direction, valid_moves)

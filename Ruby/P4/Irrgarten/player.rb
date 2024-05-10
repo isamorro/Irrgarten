@@ -12,6 +12,7 @@ require_relative 'dice'
 require_relative 'directions'
 require_relative 'weapon'
 require_relative 'shield'
+require_relative 'labyrinth_character'
 
 module Irrgarten
     class Player < LabyrinthCharacter
@@ -75,17 +76,17 @@ module Irrgarten
 
         def sum_weapons
             suma = 0
-            @weapons.each do |w|
-                suma += w.attack
-            end
+                @weapons.each do |w|
+                    suma += w.attack
+                end
             suma
         end
 
         def sum_shields
             suma = 0
-            @shields.each do |s|
-                suma += s.protect
-            end
+                @shields.each do |s|
+                    suma += s.protect
+                end
             suma
         end
 
@@ -127,16 +128,20 @@ module Irrgarten
         # Métodos públicos
 
         def initialize (number, intelligence, strength)
-            super ("Player #" + number, intelligence, strength)
+            super("Player #" + number, intelligence, strength)
             @number = number
             @consecutive_hits = 0
 
             @weapons = Array.new
             @shields = Array.new
+
+            set_health(@@INITIAL_HEALTH)
+            consecutive_hits = 0
+            set_pos(-1, -1)
         end
 
         def player_copy (other)
-            super(other)
+            return new(other.number, other.intelligence, other.strength)
         end
 
         def resurrect
@@ -167,7 +172,7 @@ module Irrgarten
         end
 
         def attack
-            sum_weapons() + strength
+            sum_weapons + strength
         end
 
         def defend (receive_attack)
@@ -217,7 +222,7 @@ module Irrgarten
             else 
                 cadena += "No dispone de escudos"
             end
-            cadena += "]"
+            cadena += "]\n"
             
             cadena
         

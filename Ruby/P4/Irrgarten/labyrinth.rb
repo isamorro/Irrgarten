@@ -13,6 +13,7 @@ require_relative 'monster'
 require_relative 'shield'
 require_relative 'orientation'
 require_relative 'directions'
+require_relative 'fuzzy_player'
 
 module Irrgarten
     class Labyrinth
@@ -128,7 +129,7 @@ module Irrgarten
 
                 @players[row][col] = player
 
-                player.pos(row, col)
+                player.set_pos(row, col)
 
             end
 
@@ -199,7 +200,7 @@ module Irrgarten
                 if empty_pos(row,col)
                     @labyrinth[row][col] = @@MONSTER_CHAR
                     @monsters[row][col] = monster
-                    monster.pos(row, col)
+                    monster.set_pos(row, col)
                 end
             end
         end
@@ -260,6 +261,10 @@ module Irrgarten
 
             return output
             
+        end
+
+        def resurrection_fuzzy_player (row, col, fp)
+            @players[row][col] = fp
         end
 
         def to_s

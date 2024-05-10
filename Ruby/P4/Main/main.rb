@@ -8,7 +8,7 @@ module MainP3
     class Main
         def self.main ()
 
-            numero_jugadores = 4
+            numero_jugadores = 2
 
             vista = UI::TextUI.new
             game = Irrgarten::Game.new(numero_jugadores)

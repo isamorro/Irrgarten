@@ -1,3 +1,4 @@
+require_relative 'Dice'
 
 module Irrgarten
     class CombatElement
@@ -8,22 +9,22 @@ module Irrgarten
         end
 
         def produce_effect
-
             resultado = 0
             if @uses > 0  
                 @uses = @uses - 1
                 resultado = @protection
             end
             resultado
-            
         end
 
-        def discard_element
+        def discard
             Dice.discard_element(@uses)
         end
 
         def to_s
-         cadena = @effect + ", " + @uses +"]"
+         cadena = @effect.to_s 
+         cadena += ", " + @uses.to_s 
+         cadena += "]"
          cadena
         end
 

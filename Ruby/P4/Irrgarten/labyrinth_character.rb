@@ -14,7 +14,7 @@ module Irrgarten
         end
 
         def self.labyrinth_character_copia (other)
-            new (other.name, other.intelligence, other.strength)
+            new(other.name, other.intelligence, other.strength)
         end
 
         def dead
@@ -63,9 +63,6 @@ module Irrgarten
             if (@health > 0)
                 @health -= 1
             end
-        end
-
-        def attack
         end
 
         def defend (attack)
