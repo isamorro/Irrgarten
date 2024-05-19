@@ -181,7 +181,6 @@ module Irrgarten
 
         # Métodos públicos
 
-        # P3
         def spread_players (players)
 
             players.each do |p| 

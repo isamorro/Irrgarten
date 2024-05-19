@@ -1,4 +1,13 @@
 
+#encoding:utf-8
+
+=begin
+
+    Autor: Isabel Morro Tabares 
+
+    Funcionalidades de los personajes de juego
+
+=end
 
 module Irrgarten
     class LabyrinthCharacter
@@ -13,8 +22,9 @@ module Irrgarten
             @col = -1
         end
 
-        def self.labyrinth_character_copia (other)
-            new(other.name, other.intelligence, other.strength)
+        def copia(other)
+            @health = other.health
+            set_pos(other.row, other.col)
         end
 
         def dead
@@ -41,6 +51,10 @@ module Irrgarten
             @health
         end
 
+        def name 
+            @name
+        end
+
         def set_health (health)
             @health = health
         end
@@ -63,9 +77,6 @@ module Irrgarten
             if (@health > 0)
                 @health -= 1
             end
-        end
-
-        def defend (attack)
         end
 
     end

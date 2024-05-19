@@ -43,7 +43,13 @@ public class Player extends LabyrinthCharacter {
     
     public Player (Player other){
         super (other);
-        this.number = other.getNumber();
+        this.number = other.number;
+        
+        weapons = new ArrayList<>();
+        shields = new ArrayList<>();
+        shieldCardDeck = new ShieldCardDeck();
+        weaponCardDeck = new WeaponCardDeck();
+        consecutiveHits = 0;
     }
     
     // Métodos privados
@@ -193,7 +199,7 @@ public class Player extends LabyrinthCharacter {
     @Override
     public String toString(){
         String cadena = super.toString();
-        cadena += " Numero: " + number + ","
+        cadena += ", Numero: " + number + ","
                 + " Impactos consecutivos: " 
                 + consecutiveHits + "\n" 
                 + " Armas: ";

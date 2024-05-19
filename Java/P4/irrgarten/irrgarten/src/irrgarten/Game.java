@@ -32,7 +32,7 @@
            // Creación de jugadores
            players = new ArrayList<>();
            for (int i=0; i < nplayers; i++){
-               players.add(new Player(Character.forDigit(i, nplayers),0,5));
+               players.add(new Player(Character.forDigit(i, nplayers),0,0));
                 //Dice.randomIntelligence(),
                   // Dice.randomStrength()));
            }

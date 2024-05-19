@@ -14,6 +14,7 @@ public class FuzzyPlayer extends Player {
     
     public FuzzyPlayer (Player other){
         super(other);
+        setName("Fuzzy " + other.getName());
     }
     
     @Override
@@ -32,10 +33,6 @@ public class FuzzyPlayer extends Player {
     protected float defensiveEnergy (){
         return sumShields()+ Dice.intensity(getIntelligence());
     }
-    
-    @Override
-    public String toString(){
-        return "Fuzzy " + super.toString();
-    }
-
 }
+
+        

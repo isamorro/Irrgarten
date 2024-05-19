@@ -1,13 +1,25 @@
 
+#encoding:utf-8
 
-require_relative 'Dice'
+=begin
+
+    Autor: Isabel Morro Tabares 
+
+    Funcionalidades de los jugadores Fuzzy
+
+=end
+
+require_relative 'dice'
 require_relative 'player'
+require_relative 'labyrinth_character'
 
 module Irrgarten
     class FuzzyPlayer < Player
 
         def initialize (other)
-            player_copy(other)
+            super(other.number, other.intelligence, other.strength)
+            copia(other)
+            @name = "Fuzzy " + @name
         end
 
         def move (direction, valid_moves)
@@ -23,8 +35,5 @@ module Irrgarten
             sum_shields + Dice.intensity(intelligence)
         end
 
-        def to_s
-            "Fuzzy " + super
-        end
     end
 end

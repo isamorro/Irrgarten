@@ -82,7 +82,7 @@ module Irrgarten
 
         # Devuelve la cantidad de competencia aplicada
         def self.intensity (competence)
-            @@generator.rand(competence)
+            @@generator.rand()*competence
         end
 
         # Devuelve true con una probabilidad inversamente proporcional a lo cercano que 
@@ -93,7 +93,7 @@ module Irrgarten
         
         def self.next_step(preference, valid_moves, intelligence)
             direction = valid_moves[@@generator.rand(valid_moves.size)]
-            if (@@generator.rand < intelligence/@@MAX_INTELLIGENCE)
+            if (@@generator.rand < (intelligence/@@MAX_INTELLIGENCE))
                 direction = preference
             end
             direction

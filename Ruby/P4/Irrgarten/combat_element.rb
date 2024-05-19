@@ -1,3 +1,14 @@
+#encoding:utf-8
+
+=begin
+
+    Autor: Isabel Morro Tabares 
+
+    Define los tipos de elementos para el combate
+
+    
+=end
+
 require_relative 'Dice'
 
 module Irrgarten
@@ -12,7 +23,7 @@ module Irrgarten
             resultado = 0
             if @uses > 0  
                 @uses = @uses - 1
-                resultado = @protection
+                resultado = @effect
             end
             resultado
         end

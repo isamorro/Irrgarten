@@ -140,8 +140,8 @@ module Irrgarten
             set_pos(-1, -1)
         end
 
-        def player_copy (other)
-            return new(other.number, other.intelligence, other.strength)
+        def copia(other)
+            super
         end
 
         def resurrect

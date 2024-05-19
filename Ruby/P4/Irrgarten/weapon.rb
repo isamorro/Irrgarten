@@ -2,8 +2,8 @@
 
 =begin
 
-    Autor: Isabel Morro Tabares 
-
+    Autor: Isabel Morro Tabares
+    
     Armas que utiliza el jugador en los ataques durante los combates
 
 =end

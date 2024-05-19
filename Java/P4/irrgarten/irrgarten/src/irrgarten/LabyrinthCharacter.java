@@ -24,8 +24,7 @@ abstract class LabyrinthCharacter {
     public LabyrinthCharacter(LabyrinthCharacter other){
         this (other.name, other.intelligence, other.strength);
         this.health = other.health;
-        this.row = other.row;
-        this.col = other.col;
+        setPos(other.row, other.col);
     }
     
     public boolean dead(){
@@ -61,6 +60,14 @@ abstract class LabyrinthCharacter {
         this.col = col;
     }
     
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
     @Override
     public String toString(){
         String cadena;
@@ -68,7 +75,7 @@ abstract class LabyrinthCharacter {
                  + " Inteligencia: " + intelligence + ","
                  + " Fuerza: " + strength + ","
                  + " Salud: " + health + ","
-                 + " Posicion: (" + row + ", " + col + "),  ";
+                 + " Posicion: (" + row + ", " + col + ")";
         return cadena;
     }
     
