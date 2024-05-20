@@ -32,8 +32,10 @@ module Irrgarten
             orientacion = Orientation::HORIZONTAL
             @labyrinth.add_block(orientacion, 2, 3, 1)
     
-            m1 = Monster.new("Monstruo #" + '1', 10.0, 10.0)
-            m2 = Monster.new("Monstruo #" + '2',  10.0, 10.0)
+            m1 = Monster.new("Monstruo #" + '1', Dice.random_intelligence,
+                            Dice.random_strength)
+            m2 = Monster.new("Monstruo #" + '2',  Dice.random_intelligence,
+                            Dice.random_strength)
             m3 = Monster.new("Monstruo #" + '3', Dice.random_intelligence,
                              Dice.random_strength)
 
@@ -158,7 +160,7 @@ module Irrgarten
             # Creación de jugadores
             @players = Array.new
             for i in (0..n_players-1)
-                @players << Player.new(i.to_s, 0, 5)
+                @players << Player.new(i.to_s, Dice.random_intelligence, Dice.random_strength)
             end
 
             # Determinar quién empieza

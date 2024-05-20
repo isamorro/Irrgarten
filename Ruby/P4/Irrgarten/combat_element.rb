@@ -5,8 +5,8 @@
     Autor: Isabel Morro Tabares 
 
     Define los tipos de elementos para el combate
+    De esta heredan Weapon y Shield
 
-    
 =end
 
 require_relative 'Dice'

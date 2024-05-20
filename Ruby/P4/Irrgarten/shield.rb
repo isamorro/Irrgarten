@@ -16,7 +16,7 @@ module Irrgarten
  
         # Constructor
         
-        def initialize (p,u)
+        def initialize (protection,uses)
             super
         end
 
@@ -27,7 +27,7 @@ module Irrgarten
         # To string
 
         def to_s
-            return "S[" + super
+            "S[" + super
         end
 
     end

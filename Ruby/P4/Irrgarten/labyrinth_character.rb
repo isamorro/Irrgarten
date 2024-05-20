@@ -6,6 +6,7 @@
     Autor: Isabel Morro Tabares 
 
     Funcionalidades de los personajes de juego
+    De esta heredan Monster y Player
 
 =end
 

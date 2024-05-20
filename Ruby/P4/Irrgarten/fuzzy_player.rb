@@ -11,7 +11,6 @@
 
 require_relative 'dice'
 require_relative 'player'
-require_relative 'labyrinth_character'
 
 module Irrgarten
     class FuzzyPlayer < Player

@@ -131,13 +131,9 @@ module Irrgarten
             super("Player #" + number, intelligence, strength)
             @number = number
             @consecutive_hits = 0
-
             @weapons = Array.new
             @shields = Array.new
-
             set_health(@@INITIAL_HEALTH)
-            consecutive_hits = 0
-            set_pos(-1, -1)
         end
 
         def copia(other)
