@@ -245,16 +245,16 @@ public class Labyrinth {
     @Override
     public String toString(){
         
-        StringBuilder cadena = new StringBuilder();
+        String cadena = "";
 
         
         for (int i = 0; i < nRows; i++){
             for (int j = 0; j < nCols; j++){
-                cadena.append(String.format("%-8s", labyrinth[i][j]));
-                if (j == nCols -1) cadena.append("\n");
+                cadena += labyrinth[i][j];
+                if (j == nCols -1) cadena += "\n";
             }
         }
                 
-        return cadena.toString();
+        return cadena;
     }
 }

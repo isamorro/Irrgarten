@@ -32,9 +32,8 @@
            // Creación de jugadores
            players = new ArrayList<>();
            for (int i=0; i < nplayers; i++){
-               players.add(new Player(Character.forDigit(i, nplayers),0,0));
-                //Dice.randomIntelligence(),
-                  // Dice.randomStrength()));
+               players.add(new Player(Character.forDigit(i, nplayers),Dice.randomIntelligence(),
+                Dice.randomStrength()));
            }
 
            // Determinar quien empieza
