@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Labyrinth.java</file>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Player.java</file>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Monster.java</file>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/main/mainInterfaz.java</file>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Game.java</file>
             <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Controller/Controller.java</file>
-            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/UI/InterfazUI.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/CombatElement.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Game.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Player.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/ShieldCardDeck.java</file>
             <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/LabyrinthCharacter.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Shield.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/Monster.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/UI/InterfazUI.java</file>
+            <file>file:/C:/Users/isabe/Desktop/PROYECTO%20PDOO/Java/P5/irrgarten/irrgarten/src/irrgarten/CardDeck.java</file>
         </group>
     </open-files>
 </project-private>

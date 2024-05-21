@@ -11,7 +11,7 @@ import java.util.Collections;
  *
  * @author isabe
  */
-abstract class CardDeck <T> {
+abstract class CardDeck <T extends CombatElement> {
     
     private ArrayList<T> cardDeck;
     
