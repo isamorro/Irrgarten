@@ -15,8 +15,7 @@ public class Monster extends LabyrinthCharacter {
     // Constructor
     
     public Monster (String name, float intelligence, float strength){
-        super(name, intelligence, strength);
-        setHealth(INITIAL_HEALTH);
+        super(name, intelligence, strength, INITIAL_HEALTH);
         setPos(-1, -1);
     }
  

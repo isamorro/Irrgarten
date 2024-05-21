@@ -22,8 +22,7 @@ module Irrgarten
 
         # Constructor 
         def initialize (name, intelligence, strength)
-            super
-            set_health(@@INITIAL_HEALTH)
+            super(name, intelligence, strength, @@INITIAL_HEALTH)
         end
 
         # Métodos públicos

@@ -28,7 +28,7 @@ public class Player extends LabyrinthCharacter {
     // Constructor
     
     public Player (char number, float intelligence, float strength){
-        super ("Player #" + number, intelligence, strength);
+        super ("Player #" + number, intelligence, strength, INITIAL_HEALTH);
         this.number = number;
         
         weapons = new ArrayList<>();
@@ -36,7 +36,6 @@ public class Player extends LabyrinthCharacter {
         shieldCardDeck = new ShieldCardDeck();
         weaponCardDeck = new WeaponCardDeck();
 
-        setHealth(INITIAL_HEALTH);
         consecutiveHits = 0;
         setPos(-1, -1);
     }

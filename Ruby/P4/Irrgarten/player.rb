@@ -128,12 +128,11 @@ module Irrgarten
         # Métodos públicos
 
         def initialize (number, intelligence, strength)
-            super("Player #" + number, intelligence, strength)
+            super("Player #" + number, intelligence, strength, @@INITIAL_HEALTH)
             @number = number
             @consecutive_hits = 0
             @weapons = Array.new
             @shields = Array.new
-            set_health(@@INITIAL_HEALTH)
         end
 
         def copia(other)

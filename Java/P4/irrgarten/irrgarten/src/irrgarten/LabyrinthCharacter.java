@@ -15,15 +15,15 @@ abstract class LabyrinthCharacter {
     private int row;
     private int col;
     
-    public LabyrinthCharacter (String name, float intelligence, float strength){
+    public LabyrinthCharacter (String name, float intelligence, float strength, float health){
         this.name = name;
         this.intelligence = intelligence;
         this.strength = strength;
+        this.health = health;
     }
     
     public LabyrinthCharacter(LabyrinthCharacter other){
-        this (other.name, other.intelligence, other.strength);
-        this.health = other.health;
+        this (other.name, other.intelligence, other.strength, other.health);
         setPos(other.row, other.col);
     }
     

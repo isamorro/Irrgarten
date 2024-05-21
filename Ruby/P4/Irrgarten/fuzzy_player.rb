@@ -16,7 +16,7 @@ module Irrgarten
     class FuzzyPlayer < Player
 
         def initialize (other)
-            super(other.number, other.intelligence, other.strength)
+            super(other.number, other.intelligence, other.strength, other.health)
             copia(other)
             @name = "Fuzzy " + @name
         end

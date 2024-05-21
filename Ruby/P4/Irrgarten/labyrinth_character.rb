@@ -13,18 +13,17 @@
 module Irrgarten
     class LabyrinthCharacter
 
-        def initialize (name, intelligence, strength)
+        def initialize (name, intelligence, strength, health)
             @name = name
             @intelligence = intelligence
             @strength = strength
+            @health = health
 
-            @health = 0
             @row = -1
             @col = -1
         end
 
         def copia(other)
-            @health = other.health
             set_pos(other.row, other.col)
         end
 
