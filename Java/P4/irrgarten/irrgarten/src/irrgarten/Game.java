@@ -32,9 +32,8 @@
            // Creación de jugadores
            players = new ArrayList<>();
            for (int i=0; i < nplayers; i++){
-               players.add(new Player(Character.forDigit(i, nplayers),0,0));
-                //Dice.randomIntelligence(),
-                  // Dice.randomStrength()));
+               players.add(new Player(Character.forDigit(i, nplayers), 
+                            Dice.randomIntelligence(),Dice.randomStrength()));
            }
 
            // Determinar quien empieza
@@ -58,8 +57,10 @@
         
         labyrinth.addBlock(Orientation.HORIZONTAL, 2, 3, 1);
         
-        Monster m1 = new Monster ("Monstruo #" + 1, 10f,10f);
-        Monster m2 = new Monster ("Monstruo #" + 2, 10f, 10f);
+        Monster m1 = new Monster ("Monstruo #" + 1, Dice.randomIntelligence(),
+                                             Dice.randomStrength());
+        Monster m2 = new Monster ("Monstruo #" + 2, Dice.randomIntelligence(), 
+                                             Dice.randomStrength());
         Monster m3 = new Monster ("Monstruo #" + 3, Dice.randomIntelligence(),
                                              Dice.randomStrength());
         
