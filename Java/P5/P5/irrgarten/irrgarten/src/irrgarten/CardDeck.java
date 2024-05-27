@@ -30,7 +30,7 @@ abstract class CardDeck <T> {
             addCards();
             Collections.shuffle(cardDeck);
         }
-        return cardDeck.removeFirst();
+        return cardDeck.remove(0);
     }
     
 }
