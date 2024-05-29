@@ -6,7 +6,6 @@ import java.util.ArrayList;
  * @brief   Funciones del Laberinto                                                                       
  * @author  Isabel Morro Tabares
  */
- 
 
 public class Labyrinth {
     

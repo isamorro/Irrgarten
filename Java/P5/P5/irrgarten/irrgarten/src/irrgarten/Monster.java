@@ -1,10 +1,10 @@
 
+package irrgarten;
+
 /**
  * @brief   Funcionalidades de los monstruos
  * @author  Isabel Morro Tabares
  */
-
-package irrgarten;
 
 public class Monster extends LabyrinthCharacter {
     

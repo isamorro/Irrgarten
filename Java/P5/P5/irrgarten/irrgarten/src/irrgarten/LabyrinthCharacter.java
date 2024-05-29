@@ -2,8 +2,8 @@
 package irrgarten;
 
 /**
- *
- * @author isabel
+ * @brief  Representa a los diferentes tipos de jugadores del juego
+ * @author Isabel  Morro Tabares
  */
 
 abstract class LabyrinthCharacter {

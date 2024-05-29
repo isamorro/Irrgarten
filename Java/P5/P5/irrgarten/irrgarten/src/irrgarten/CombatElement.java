@@ -2,8 +2,8 @@
 package irrgarten;
 
 /**
- *
- * @author isabel
+ * @brief  Representa los tipos de elementos del combate del juego
+ * @author Isabel  Morro Tabares
  */
 abstract class CombatElement {
     

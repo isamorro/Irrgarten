@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package irrgarten;
 
 /**
- *
+ * @brief Representa la baraja de cartas de tipo Shield del juego
  * @author isabel
  */
 public class ShieldCardDeck extends CardDeck<Shield> {

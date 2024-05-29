@@ -1,5 +1,4 @@
-
-        
+    
 package main;
 
 import irrgarten.Controller.Controller;
@@ -7,8 +6,8 @@ import irrgarten.Game;
 import irrgarten.UI.TextUI;
 
 /**
- *
- * @author Omnia Infosys
+ * @brief   Funcion principal para jugar en forma de texto
+ * @author  Isabel Morro Tabares
  */
 public class main {
 

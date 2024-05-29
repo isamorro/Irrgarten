@@ -7,8 +7,8 @@ package irrgarten.UI;
 import irrgarten.Directions;
 
 /**
- *
- * @author isabe
+ * @brief   Representa los botones que nos permiten movernos por el laberinto
+ * @author  Isabel Morro Tabares
  */
 public class Cursors extends javax.swing.JDialog {
 

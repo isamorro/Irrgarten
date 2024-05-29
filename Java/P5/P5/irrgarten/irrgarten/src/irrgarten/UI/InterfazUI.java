@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package irrgarten.UI;
 
 import java.lang.Integer;
@@ -10,8 +7,8 @@ import irrgarten.GameState;
 import java.awt.Color;
 
 /**
- *
- * @author isabe
+ * @brief   Representa la forma de jugar con interfaz gráfica
+ * @author  Isabel Morro Tabares
  */
 public class InterfazUI extends javax.swing.JFrame implements UI{
 
@@ -75,6 +72,7 @@ public class InterfazUI extends javax.swing.JFrame implements UI{
         win = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 153, 153));
 
         jugadores.setColumns(20);
         jugadores.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
@@ -87,7 +85,7 @@ public class InterfazUI extends javax.swing.JFrame implements UI{
         jScrollPane2.setViewportView(monstruos);
 
         laberinto.setColumns(20);
-        laberinto.setFont(new java.awt.Font("Courier 10 Pitch", 0, 18)); // NOI18N
+        laberinto.setFont(new java.awt.Font("Courier New", 1, 18)); // NOI18N
         laberinto.setRows(5);
         jScrollPane3.setViewportView(laberinto);
 
@@ -96,7 +94,7 @@ public class InterfazUI extends javax.swing.JFrame implements UI{
         log.setRows(5);
         jScrollPane4.setViewportView(log);
 
-        jTextField1.setBackground(new java.awt.Color(255, 255, 204));
+        jTextField1.setBackground(new java.awt.Color(255, 204, 204));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jTextField1.setText("IRRGARTEN: The Game");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +148,7 @@ public class InterfazUI extends javax.swing.JFrame implements UI{
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 734, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))

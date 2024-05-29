@@ -5,6 +5,10 @@ import irrgarten.Directions;
 import irrgarten.GameState;
 import java.util.Scanner;
 
+/**
+ * @brief   Representa la forma de jugar con texto
+ * @author  Isabel Morro Tabares
+ */
 
 public class TextUI implements UI{
     
